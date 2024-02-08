@@ -1,0 +1,219 @@
+/* --------------- RESETS ---------------- */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: stretch;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* ---------------- TOAST ------------------ */
+.toaster {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  &.tr {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+.toast {
+  animation: slideIn 0.5s ease-in-out;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid #646cff;
+  background: #1a1a1a;
+}
+
+.toast.die {
+  animation: die 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes die {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+
+/* --------------- STANDARD ---------------- */
+
+#app {
+  width: 100%;
+  display: flex;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: columns;
+}
+
+.content {
+  margin: auto;
+}
+
+.timer {
+  font-size: 20px;
+}
+
+.drawer {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background: #646cff;
+  overflow-y: scroll;
+  padding-right: 37px;
+  box-sizing: content-box;
+  
+  h3 {
+    margin: 0;
+  }
+}
+
+.achievement {
+  background: #242424;
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 10px 20px;
+
+  p, h4 {
+    margin: 0;
+  }
+
+  p {
+    opacity: 0;
+  }
+
+  &.win {
+    background: repeating-linear-gradient(
+      45deg,
+      #242424,
+      #242424 10px,
+      #646cff 10px,
+      #646cff 20px
+    );
+
+    p {
+      opacity: 1;
+    }
+  }
+}
+
+/* --------------- FORMS ---------------- */
+label {
+  display: flex;
+  font-weight: bold;
+  flex-direction: column;
+}
+
+input {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.tile-one {
+  opacity: 0;
+}
+
+/* --------------- UTIL ---------------- */
+.show {
+  animation: show 0.2s ease-in-out;
+}
+
+@keyframes show {
+  from {
+      transform: translateY(-20%);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes hide {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}

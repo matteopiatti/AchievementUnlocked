@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="drawer">
+        <h3>Achievements</h3>
+        <div class="achievement" id="a1">
+          <h4>The Start</h4>
+          <p>Start the game successfully</p>
+        </div>
+        <div class="achievement" id="a2">
+          <h4>Locate me</h4>
+          <p>Allow location</p>
+        </div>
+        <div class="achievement" id="a3">
+          <h4>Hide me</h4>
+          <p>Block location</p>
+        </div>
+        <div class="achievement" id="a4">
+          <h4>Another dimension</h4>
+          <p>Resize the page</p>
+        </div>
+        <div class="achievement" id="a5">
+          <h4>It's rewind time</h4>
+          <p>Reload the page</p>
+        </div>
+        <div class="achievement" id="a6">
+          <h4>teenie-weenie</h4>
+          <p>Resize page to below 50px height smallest options</p>
+        </div>
+        <div class="achievement" id="ax">
+          <h4>The End</h4>
+          <p>End the game successfully</p>
+        </div>
+      </div>
+      <div class="main">
+        <div class="timer">00:00:00</div>
+        <div class="content">
+          <button id="start">Start Game</button>
+          <hr>
+          <div class="board">
+            <div class="tile-one">
+              <label for="name">
+              Name
+              <input type="text" id="name">
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
