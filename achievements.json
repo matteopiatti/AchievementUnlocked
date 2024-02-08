@@ -1,0 +1,12 @@
+[
+    {
+        nr: 1,
+        text: 'Game started',
+        done: false
+    },
+    {
+        nr: 2,
+        text: 'Location allowed',
+        done: false
+    }
+]
