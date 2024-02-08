@@ -29,13 +29,15 @@ class Store {
         localStorage.setItem('time', time);
     }
 
-    setup() {
+    init() {
         this.achievements = JSON.parse(localStorage.getItem('achievements'));
         this.time = localStorage.getItem('time');
         if (!this.achievements) {
             this.achievements = [false, false, false, false, false];
         }
     }
+
+    this.init()
 }
 
 export const store = new Store();

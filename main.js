@@ -3,7 +3,6 @@ import { timer } from './timer.js'
 import { store } from './store.js'
 
 // Setup --> Auslagern??
-store.setup()
 console.log(store)
 const startButton = document.querySelector('#start')
 const counter = document.querySelector('.timer')
